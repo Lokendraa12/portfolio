@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(10, 10, 39);
+            color: white;
+            font-family: 'poppins', sans-serif;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-style: initial;
+            height: 80px;
+            width: 100%;
+            background-color: rgb(8 8 60);
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            font-size: 1.04rem;
+            color: rgb(49, 49, 102);
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 130px 0;
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 1.5rem;
+
+        }
+
+        .leftsection .button {
+            padding: 50px 0;
+        }
+
+        .leftsection .btn {
+            padding: 12px;
+            background-color: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        main hr {
+            border: 0;
+            background-color: rgb(59, 49, 112);
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        main .new-hr {
+            border: 0;
+            background-color: rgb(59, 49, 112);
+            height: 1.2px;
+            margin: 50px 40px;
+        }
+
+        .purple {
+            color: rgb(128, 49, 201);
+            font-style: italic;
+        }
+
+        #element {
+            color: rgb(128, 49, 201);
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+            /* margin-bottom:100px ; */
+        }
+
+        .secondsection h1 {
+            font-size: 1.5rem;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        .secondsection .box {
+            background-color: white;
+            width: 70vw;
+            height: 2px;
+            margin: 56px;
+            display: flex;
+        }
+
+        .secondsection .vertical {
+            background-color: white;
+            width: 1px;
+            height: 95px;
+            margin: 0 100px;
+
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+            border-radius: 23px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 155px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: #484880;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+            margin-bottom: 120px;
+            background: rgb(53, 28, 117);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgb(126, 121, 155);
+        }
+
+        .container-1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h2 {
+            color: #0b0a0b;
+            display: flex;
+            justify-content: center;
+        }
+
+        .info {
+            margin-bottom: 20px;
+            color: black;
+            padding-left: 100px;
+        }
+
+        .info p {
+            font-size: 18px;
+            margin: 5px 0;
+            padding-left: 20px;
+            color: gray;
+        }
+
+        .social a {
+            display: inline-block;
+            margin: 5px;
+            text-decoration: none;
+            color: #6649b0;
+            font-size: 18px;
+        }
+
+        .social a:hover {
+            color: #8773bb;
+            font-size: 20px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .new-btn {
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        .footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .footer-brand h2 {
+            color: #fff;
+            /* font-size: 1.8rem;  */
+        }
+
+        .footer-brand h2 span {
+            color: #38bdf8;
+        }
+
+        .footer-brand p {
+            /* font-size: 0.95rem; */
+            color: #94a3b8;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-nav a {
+            text-decoration: none;
+            color: #cbd5e1;
+            transition: color 0.3s;
+        }
+
+        .footer-nav a:hover {
+            color: #38bdf8;
+            border-bottom: 1.5px solid rgb(113, 134, 215);
+        }
+
+        .footer-social a {
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            color: #cbd5e1;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .footer-social a:hover {
+            transform: scale(1.2);
+            color: #38bdf8;
+        }
+
+        .footer-bottom {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Lokendra portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home" target="">Home</li>
+                    <li><a href="#About">About</a></li>
+                    <!-- <li><a href="/">Services</a></li> -->
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="#Contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection" id="home">
+            <div class="leftsection">
+                Hy,My name is <span class="purple">Lokendra</span>
+                <div>and I am a passionate </div>
+                <span id="element"></span>
+
+                <div class="button">
+                    <button class="btn">Download resume</button>
+                    <button class="btn">Visit Github</button>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="web.jpg" height="300px">
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection" id="About">
+            <span class="text-gray">What i have done so far</span>
+            <h1>work experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="html.jpg">
+                    <div class="vertical-title">
+                        Html Developer (2010-2012)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi sed asperiores in eum facere
+                        quas voluptatibus quaerat, eos consectetur eligendi quos repellendus architecto quo nostrum
+                        facilis animi repellat corrupti magni ut ex unde molestias.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="nodejs.jpg">
+                    <div class="vertical-title">
+                        Node js Developer (2012-2014)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi sed asperiores in eum facere
+                        quas voluptatibus quaerat, eos consectetur eligendi quos repellendus architecto quo nostrum
+                        facilis animi repellat corrupti magni ut ex unde molestias.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="frontend.png">
+                    <div class="vertical-title">
+                        Frontend developer (2010-2012)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi sed asperiores in eum facere
+                        quas voluptatibus quaerat, eos consectetur eligendi quos repellendus architecto quo nostrum
+                        facilis animi repellat corrupti magni ut ex unde molestias.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="react.png">
+                    <div class="vertical-title">
+                        React developer(2010-2012)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi sed asperiores in eum facere
+                        quas voluptatibus quaerat, eos consectetur eligendi quos repellendus architecto quo nostrum
+                        facilis animi repellat corrupti magni ut ex unde molestias.
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <hr class="new-hr">
+    </main>
+
+    <div class="container" id="Contact">
+        <h2>Contact Me</h2>
+        <!-- Contact Form -->
+        <div class="container-1">
+            <form action="submit_form.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button class="new-btn" type="submit">Send Message</button>
+            </form>
+            <!-- Your Information -->
+            <div class="info">
+                <i class="fa-solid fa-phone"></i> <strong>Phone:</strong>
+                <p>+91 9171429790</p>
+                <i class="fa-regular fa-location-dot"></i> <strong>Address:</strong>
+                <p>Indore(M.P)</p>
+                <i class="fa-regular fa-envelope-open"></i> <strong>Email:</strong>
+                <p> arunkushwah949@gmail.com</p>
+
+
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/lokendra-kushwah-b828a5307" target="_blank">LinkedIn</a> |
+                    <a href="https://github.com/Lokendra-coder" target="_blank">GitHub</a> |
+                    <!-- <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                Lokendra<span style="color:#38bdf8;">.in</span>
+
+                <p>Creative Web Developer & Designer</p>
+            </div>
+
+            <div class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#About">About</a>
+                <a href="#Contact">Contact</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://github.com/Lokendra-coder"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/lokendra-kushwah-b828a5307"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p class="footer-bottom">© 2025 Lokendraportfolio.com || All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web developer', 'Web designer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
